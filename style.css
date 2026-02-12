@@ -1,0 +1,28 @@
+@charset "UTF-8";
+*{
+    margin: 0px;
+    padding: 0px;
+}
+header.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 12px;
+    background-color: white;
+}
+.header-text{
+    text-align: center;
+    font-size: 0.9em;
+    font-family: fonte2;
+    color: blue;
+}
+.genial{
+    color: red;
+}
+.header-menu a{
+    text-decoration: none;
+    color: rgb(62, 62, 62);
+    font-family: fonte2;
+    padding: 0px 6px;
+    font-size: 1em;
+}
