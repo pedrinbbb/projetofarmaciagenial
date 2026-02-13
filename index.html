@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farmacia Geenial</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-query.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         @font-face {
             font-family: fonte1;
@@ -27,6 +30,7 @@
     </style>
 </head>
 <body>
+
     <header class="container">
         <div class="header-text">
             <h1>Farmacia <span class="genial">Genial</span></h1>
@@ -37,11 +41,13 @@
             <a href="#">Produtos</a>
             <a href="#">Contato</a>
         </div>
-        <div class="menu-phone" style="display: none;">
-                <span class="material-symbols-outlined">menu</span>
+        <div class="menu-phone">
+                <span class="material-symbols-outlined" onclick="abrirMenu()">menu</span>
         </div>
     </header>
-    <div class="header-phone" style="display: none; text-align: center;">
+
+    <div class="menu">
+        <a href="#" onclick="fecharMenu()">&times;Fechar</a>
         <a href="#">Inicio</a>
         <a href="#">Categorias</a>
         <a href="#">Produtos</a>
@@ -50,49 +56,124 @@
     <section class="banner-fundo">
         <h1>Sua Saúde em boas mãos na <span class="farmacia">Farmácia</span> <span class="genial">Genial</span> </h1>
         <p>Medicamentos, perfumaria e muito mais com atendimento rápido e personalizado pelo WhatsApp.</p>
-        <h2><a href="#">Explorar</a></h2>
+        <h2><a href="#destaques">Explorar</a></h2>
     </section>
     <main>
-        <h1>Nossos Produtos</h1>
-        <p>Confira nossas categorias e peça diretamente pelo WhatsApp.</p>
+
+        <div class="maintext">
+            <h1>Nossos Produtos</h1>
+            <p>Confira nossas categorias e peça diretamente pelo WhatsApp.</p>
+        </div>
         <section class="categorias">
             <div class="categorias-col">
-                <span class="material-symbols-outlined">pill</span>
+                <span class="material-symbols-outlined" id="um">pill</span>
                 <h2>medicamentos</h2>
-                <p>Ampla variedade de medicamentos com orientação farmacêutica. Genéricos, similares e referência.</p>
+                <p>Medicamentos genéricos, de referência e manipulados. Consulte disponibilidade e preços.</p>
             </div>
             <div class="categorias-col">
-                <span class="material-symbols-outlined">star</span>
+                <span class="material-symbols-outlined" id="dois">star</span>
                 <h2>Perfumaria</h2>
-                <p>Produtos de beleza, cuidados pessoais, maquiagem e perfumes das melhores marcas.</p>
+                <p>Produtos de beleza, cuidados pessoais, maquiagem e higiene das melhores marcas.</p>
             </div>
             <div class="categorias-col">
-                <span class="material-symbols-outlined">child_care</span>
+                <span class="material-symbols-outlined" id="tres">child_care</span>
                 <h2>Fraldas & Bebês</h2>
-                <p>Fraldas, lenços umedecidos, mamadeiras e tudo para o cuidado do seu bebê.</p>
+                <p>Fraldas descartáveis, lenços umedecidos e produtos para cuidados com o bebê.</p>
             </div>
         </section>
-        <section class="destaques">
-            <h1>Destaques</h1>
+
+            <h1 style="text-align: center; font-family: fonte3; margin-top: 45px; margin-bottom: 38px;">Destaques</h1>
+        <section class="destaques" id="destaques">
             <aside class="destaques-produto">
-                <img src="https://via.placeholder.com/150" alt="Produto 1">
-                <h2>Produto 1</h2>
-                <h3>Descrição do produto 1</h3>
+                <img src="img/Design sem nome.png" alt="Produto 1">
+                <h2>Lisador Dip</h2>
+                <h3>500mg 10 comprimdos</h3>
                 <p>R$ 19,90</p>
+                <a href="#">
+                    <i class="fa fa-whatsapp" style="font-size:24px"></i>
+                    Verificar estoque
+                </a>
             </aside>
             <aside class="destaques-produto">
-                <img src="https://via.placeholder.com/150" alt="Produto 2">
-                <h2>Produto 2</h2>
-                <h3>Descrição do produto 2</h3>
-                <p>R$ 29,90</p>
+                <img src="img/inaladorgtech.png" alt="Produto 1">
+                <h2>Inalador G-TECH</h2>
+                <h3>Mascaras adulto e infantil</h3>
+                <p>R$ 119,99</p>
+                <a href="#">
+                    <i class="fa fa-whatsapp" style="font-size:24px"></i>
+                    Verificar estoque
+                </a>
             </aside>
             <aside class="destaques-produto">
-                <img src="https://via.placeholder.com/150" alt="Produto 3">
-                <h2>Produto 3</h2>
-                <h3>Descrição do produto 3</h3>
-                <p>R$ 39,90</p>
+                <img src="img/melatoninagotas.png" alt="Produto 1">
+                <h2>Melatonina Gotas</h2>
+                <h3>20ml</h3>
+                <p>R$ 24,99</p>
+                   <a href="#"> <i class="fa fa-whatsapp" style="font-size:24px"></i>Verificar estoque</a>     
+            </aside>
+            <aside class="destaques-produto">
+                <img src="img/aparelhopressaogtech.png">
+                <h2>Aparelho de pressão G-TECH</h2>
+                <h3>Braço</h3>
+                <p>R$ 24,99</p>
+                   <a href="#"> <i class="fa fa-whatsapp" style="font-size:24px"></i>Verificar estoque</a>     
             </aside>
         </section>
     </main>
+
+    <div class="footer">
+        <h1>Contato e Localização</h1>
+        <footer class="footer-container">
+            <div class="info">
+                <div class="infos-col">
+                    <span class="material-symbols-outlined">location_on</span>   
+                    <div class="end">
+                        <h3>Endereço</h3>
+                        <p>Av. Osorio de paiva 5386, <br>Canindezinho</p>
+                    </div>
+                </div>
+                <div class="infos-col">
+                    <span class="material-symbols-outlined">call</span>
+                    <div class="tel">
+                        <h3>Telefone</h3>
+                        <p>(85) 98810-4274</p>
+                    </div>
+                </div>
+                <div class="infos-col">
+                    <span class="material-symbols-outlined">alarm</span>
+                    <div class="hora">
+                        <h3>Horário</h3>
+                        <p>Seg a Sab: 7h-21h | Dom: 7h-12h</p>
+                    </div>
+                </div>
+            </div>
+            <div class="maps">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d497.62821579201216!2d-38.6020541!3d-3.8045156!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74da514d38e63%3A0xd96a1b79a32f3a5b!2sFarm%C3%A1cia%20Genial!5e0!3m2!1spt-BR!2sbr!4v1770923484983!5m2!1spt-BR!2sbr"allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </footer>
+        <footer class="footer2-container">
+            <h1>Farmácia Genial</h1>
+            <p>Sua saúde em boas mãos. Medicamentos, perfumaria e cuidados para toda a família.</p>
+            <a href="#">Inicio</a>
+            <a href="#">Categorias</a>
+            <a href="#">Contato</a><br>
+            <p>© 2026 Farmácia Genial. Todos os direitos reservados</p>
+        </footer>
+    </div>
+    <script>
+        function abrirMenu(){
+            if(document.querySelector('.menu').style.width == '0'){
+                document.querySelector('.menu').style.width = '170px'
+        
+        }else {
+            document.querySelector('.menu').style.width = '170px'
+        }
+        }
+        function fecharMenu(){
+            document.querySelector('.menu').style.width = '0px'
+        }
+
+    </script>
+    <script src="script.js"></script>
 </body>
 </html>
