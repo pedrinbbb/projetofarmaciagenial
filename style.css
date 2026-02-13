@@ -203,10 +203,11 @@ aside{
     border-radius: 12px;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.068);
     font-family: fonte4;
-    max-height: 420px;
+    height: 420px;
 }
 aside h2{
     padding-bottom: 0px;
+    
 }
 aside h3{
     font-size: 0.9em;
@@ -231,6 +232,7 @@ aside a{
     color: white;
     background-color: #16A34A;
     border-radius: 12px;
+
 }
 .footer{
     margin-top: 70px;
