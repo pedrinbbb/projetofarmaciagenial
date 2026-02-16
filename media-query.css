@@ -29,6 +29,10 @@
         font-size: 2.6em;
         width: 600px;
     }
+    .banner-fundo h2{
+        font-size: 2.3em;
+        width: 600px;
+    }   
     .banner-fundo p{
         font-size: 1em;
         width: 400px;
@@ -48,10 +52,14 @@
     }
     .banner-fundo h1{
         font-size: 6vw;
-        max-width: 320px;
+        
     }
+    .banner-fundo h2{
+        font-size: 5.5vw;
+        
+    } 
     .banner-fundo p{
-        font-size: 4vw;
+        font-size: 3.3vw;
         max-width: 280px;
     }
     .banner-fundo a{

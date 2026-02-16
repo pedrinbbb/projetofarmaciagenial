@@ -22,6 +22,7 @@ header.container{
     font-family: fonte2;
     color: blue;
 }
+
 .header-menu a{
     text-decoration: none;
     color: rgb(62, 62, 62);
@@ -79,8 +80,15 @@ header.container{
     font-size: 4em;
     color: white;
     font-family: fonte2;
-    max-width: 900px;
+    max-width: 600px;
 }
+.banner-fundo h2{
+    font-size: 3em;
+    color: white;
+    font-family: fonte2;
+    max-width: 500px;
+}
+
 .banner-fundo p{
     font-size: 1.2em;
     color: white;
@@ -89,14 +97,14 @@ header.container{
     margin-bottom: 38px;
     max-width: 490px;
 }
-.banner-fundo h2 > a{
+.banner-fundo a{
     text-decoration: none;  
     color: white;
     padding: 8px 24px;
     background-color: red;
-    font-family: fonte3;
+    font-family: fonte4;
     border-radius: 12px;
-    
+    font-size: 0.5em;
 }
 .banner-fundo a:hover{
     background-color: rgb(255, 255, 255);
@@ -186,6 +194,12 @@ section.categorias{
     gap: 30px;
     text-align: center;
 }
+ul{
+    list-style: none;
+}
+li{
+    flex-grow: 1;
+}
 aside img{
     width: 180px;
     margin-bottom: 12px;
@@ -203,7 +217,7 @@ aside{
     border-radius: 12px;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.068);
     font-family: fonte4;
-    height: 420px;
+
 }
 aside h2{
     padding-bottom: 0px;
