@@ -51,26 +51,39 @@
         height: 47vh;
     }
     .banner-fundo h1{
-        font-size: 6vw;
-        
+        font-size: 22px;
+        max-width: 320px;
     }
     .banner-fundo h2{
-        font-size: 5.5vw;
-        
+        font-size: 20px;
+        max-width: 320px;        
     } 
     .banner-fundo p{
-        font-size: 3.3vw;
-        max-width: 280px;
+        font-size: 14px;
+        max-width: 320px;
     }
     .banner-fundo a{
-        font-size: 5vw;
+        font-size: 22px;
     }
     .destaques{
-        gap: 25px;
+        margin-bottom: 25px;
         justify-content: center;
     }
-    .footer h1{
-        font-size: 1.4em
+    aside{
+        width: 280px;
+        background-color: white;
+        padding: 12px;
+        margin-left: 6px;
+        border-radius: 12px;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.068);
+        font-family: fonte4;
     }
-    
+    aside img{
+        width: 70%;
+        margin-bottom: 12px;
+    }
+    aside a{
+        font-size: 12px;
+        padding: 4px;
+    }
 }

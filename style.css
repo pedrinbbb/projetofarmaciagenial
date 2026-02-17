@@ -80,13 +80,13 @@ header.container{
     font-size: 4em;
     color: white;
     font-family: fonte2;
-    max-width: 600px;
+    max-width: 900px;
 }
 .banner-fundo h2{
     font-size: 3em;
     color: white;
     font-family: fonte2;
-    max-width: 500px;
+    max-width: 600px;
 }
 
 .banner-fundo p{
@@ -191,7 +191,7 @@ section.categorias{
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 18px;
     text-align: center;
 }
 ul{
@@ -203,7 +203,6 @@ li{
 aside img{
     width: 180px;
     margin-bottom: 12px;
-
 }
 aside img:hover{
     transition: 0.5s;
@@ -213,11 +212,10 @@ aside{
     width: 240px;
     background-color: white;
     padding: 12px;
-    margin-left: 22px;
+    margin-left: 6px;
     border-radius: 12px;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.068);
     font-family: fonte4;
-
 }
 aside h2{
     padding-bottom: 0px;
