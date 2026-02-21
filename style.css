@@ -29,6 +29,7 @@ header.container{
     font-family: fonte2;
     padding: 0px 6px;
     font-size: 1em;
+    transition: 0.4s;
 }
 .menu-phone{
     display: none;
@@ -49,7 +50,6 @@ header.container{
     transition: width 0.3s;
     z-index: 1;
     overflow: hidden;
-
 
 }
 .menu a{
@@ -105,11 +105,11 @@ header.container{
     font-family: fonte4;
     border-radius: 12px;
     font-size: 0.5em;
+    transition: 0.5s;
 }
 .banner-fundo a:hover{
     background-color: rgb(255, 255, 255);
     color: rgb(255, 26, 26);
-    transition: 0.5s;
 }
 main{
     background-color: #F4F8FC;
@@ -140,10 +140,10 @@ section.categorias{
     height: 260px;
     border-radius: 12px;
     border: 1px solid rgba(128, 128, 128, 0.13);
+    transition: 0.5s;
 }
 .categorias-col:hover{
     box-shadow: 2px 1px 10px rgba(0, 0, 0, 0.11);
-    transition: 0.3s;
 }
 .categorias-col h2{
     color: black;
@@ -203,10 +203,11 @@ li{
 aside img{
     width: 180px;
     margin-bottom: 12px;
+    transition: 0.5s;
 }
 aside img:hover{
-    transition: 0.5s;
-    transform: scale(1.02);
+    transform: scale(1.03);
+    
 }
 aside{
     width: 240px;
