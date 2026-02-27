@@ -6,6 +6,7 @@
     <title>Farmacia Geenial</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media-query.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
@@ -33,124 +34,134 @@
 
     <header class="container">
         <div class="header-text">
-            <h1>Farmacia <span class="genial">Genial</span></h1>
+            <div class="header-logo">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="text-header">
+                <h1>Farmácia <span class="genial">Genial</span></h1>
+                <div class="header-paragrafo"><p>Saúde e bem-estar para você</p></div>
+            </div>
         </div>
-        <div class="header-menu">
-            <a href="#">Inicio</a>
-            <a href="#">Categorias</a>
-            <a href="#">Produtos</a>
-            <a href="#">Contato</a>
-        </div>
-        <div class="menu-phone">
-                <span class="material-symbols-outlined" onclick="abrirMenu()">menu</span>
+
+        <div class="carrinho-container">
+            <div class="carrinho-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+            <div class="carrinho-valor">
+                <p>R$ 0.00</p>
+            </div>
         </div>
     </header>
-
-    <div class="menu">
-        <a href="#" onclick="fecharMenu()">&times;Fechar</a>
-        <a href="#">Inicio</a>
-        <a href="#">Categorias</a>
-        <a href="#">Produtos</a>
-        <a href="#">Contato</a>
-    </div>
-    <section class="banner-fundo">
-        <h1>Sua Saúde em boas mãos </h1>
-        <h2>na <span class="genial">FÁRMACIA GENIAL</span></h2>
-        <p>Medicamentos, perfumaria e muito mais com atendimento rápido e personalizado pelo WhatsApp.</p>
-        <h2><a href="#destaques">Explorar</a></h2>
-    </section>
-    <main>
-
-        <div class="maintext">
-            <h1>Nossos Produtos</h1>
-            <p>Confira nossas categorias e peça diretamente pelo WhatsApp.</p>
+    <section class="fundo-banner">
+        <div class="text-banner">
+            <h1>Sua saúde em <br><span class="destaque-banner">boas mãos</span></h1>
+            <p>Medicamentos, vitaminas e cuidados com os melhores preços. Entrega rápida via WhatsApp!</p>
+            <div class="produtos-banner">
+                <a href="#main">Ver Produtos</a>
+            </div>
         </div>
-        <section class="categorias">
-            <div class="categorias-col">
-                <span class="material-symbols-outlined" id="um">pill</span>
-                <h2>medicamentos</h2>
-                <p>Medicamentos genéricos, de referência e manipulados. Consulte disponibilidade e preços.</p>
+    </section>
+    <main id="main">
+        <section class="produtos">
+            <h1>Nossos Produtos</h1>
+            <div class="categorias">
+                <ul class="categorias-container">
+                    <li><a href="#">Fraldas</a></li>
+                    <li><a href="#medicamentos">Medicamentos</a></li>
+                    <li><a href="#">Perfumaria</a></li>
+                    <li><a href="#">Absorventes</a></li>
+                    <li><a href="#">Bebês</a></li>
+                </ul>
             </div>
-            <div class="categorias-col">
-                <span class="material-symbols-outlined" id="dois">star</span>
-                <h2>Perfumaria</h2>
-                <p>Produtos de beleza, cuidados pessoais, maquiagem e higiene das melhores marcas.</p>
-            </div>
-            <div class="categorias-col">
-                <span class="material-symbols-outlined" id="tres">child_care</span>
-                <h2>Fraldas & Bebês</h2>
-                <p>Fraldas descartáveis, lenços umedecidos e produtos para cuidados com o bebê.</p>
-            </div>
-        </section>
+            <article class="produto-container">
+                <article class="produto">
+                    <img src="img/remedioteste.png">
+                    <h5 class="produto-tipo">medicamento</h5>
+                    <h2 class="nome-produto">aparelho pressao</h2>
+                    <p class="descricao-produto"> teste tes te dwadwaddwad</p>
+                    <div class="valor-carrinho">
+                        <p class="valor">R$ 8.90</p>
+                        <button type="button" onclick="buttonAdd()" id="buttonadd">
+                            <div class="icon-carrinho">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <div class="text-carrinho">Adicionar</div>
+                        </button>
+                    </div>
+                </article>
+                <article class="produto">
+                    <img src="img/aparelhopressaogtech.png" alt="">
+                    <h5 class="produto-tipo">medicamento</h5>
+                    <h2 class="nome-produto">aparelho pressao</h2>
+                    <p class="descricao-produto"> teste tes te dwadwaddwad</p>
+                    <div class="valor-carrinho">
+                        <p class="valor">R$ 8.90</p>
+                        <button type="button">
+                            <div class="icon-carrinho">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <div class="text-carrinho">Adicionar</div>
+                        </button>
+                    </div>
+                </article>
+                <article class="produto">
+                    <img src="img/aparelhopressaogtech.png" alt="">
+                    <h5 class="produto-tipo">medicamento</h5>
+                    <h2 class="nome-produto">aparelho pressao</h2>
+                    <p class="descricao-produto"> teste tes te dwadwaddwad</p>
+                    <div class="valor-carrinho">
+                        <p class="valor">R$ 8.90</p>
+                        <button type="button">
+                            <div class="icon-carrinho">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <div class="text-carrinho">Adicionar</div>
+                        </button>
+                    </div>
+                </article>
+                <article class="produto">
+                    <img src="img/aparelhopressaogtech.png" alt="">
+                    <h5 class="produto-tipo">medicamento</h5>
+                    <h2 class="nome-produto">aparelho pressao</h2>
+                    <p class="descricao-produto"> teste tes te dwadwaddwad</p>
+                    <div class="valor-carrinho">
+                        <p class="valor">R$ 8.90</p>
+                        <button type="button">
+                            <div class="icon-carrinho">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <div class="text-carrinho">Adicionar</div>
+                        </button>
+                    </div>
+                </article>
+                <article class="produto">
+                    <img src="img/aparelhopressaogtech.png" alt="">
+                    <h5 class="produto-tipo">medicamento</h5>
+                    <h2 class="nome-produto">aparelho pressao</h2>
+                    <p class="descricao-produto"> teste tes te dwadwaddwad</p>
+                    <div class="valor-carrinho">
+                        <p class="valor">R$ 8.90</p>
+                        <button type="button">
+                            <div class="icon-carrinho">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <div class="text-carrinho">Adicionar</div>
+                        </button>
+                    </div>
+                </article>
+                <article class="produto">
+                    <img src="img/remedioteste.png">
+                    <p class="produto-tipo">medicamento</p>
+                    <h3 class="nome-produto">aparelho pressao</h3>
+                    <p class="descricao-produto">descrição...</p>
 
-            <h1 style="text-align: center; font-family: fonte3; margin-top: 45px; margin-bottom: 38px;">Destaques</h1>
-        <section class="destaques" id="destaques">
-            <aside class="destaques-produto">
-                <img src="img/aparelhopressaogtech.png" alt="">
-                <ul>
-                    <li><h2>Inalador G-TECH</h2></li>
-                    <li><h3>Mascara adulto e infantil</h3></li>
-                    <li><p>119,99</p></li>
-                </ul>
-                <a href="#">
-                    <i class="fa fa-whatsapp" style="font-size:24px"></i>
-                    Verificar estoque
-                </a>
-            </aside>
-
-            <aside class="destaques-produto">
-                <img src="img/inaladorgtech.png" alt="">
-                <ul>
-                    <li><h2>Inalador G-TECH</h2></li>
-                    <li><h3>Mascara adulto e infantil</h3></li>
-                    <li><p>119,99</p></li>
-                </ul>
-                <a href="#">
-                    <i class="fa fa-whatsapp" style="font-size:24px"></i>
-                    Verificar estoque
-                </a>
-            </aside>
-
-            <aside class="destaques-produto">
-                <img src="img/melatoninagotas.png" alt="">
-                <ul>
-                    <li><h2>Inalador G-TECH</h2></li>
-                    <li><h3>Mascara adulto e infantil</h3></li>
-                    <li><p>119,99</p></li>
-                </ul>
-                <a href="#">
-                    <i class="fa fa-whatsapp" style="font-size:24px"></i>
-                    Verificar estoque
-                </a>
-            </aside>
-
-            <aside class="destaques-produto">
-                <img src="img/inaladorgtech.png" alt="">
-                <ul>
-                    <li><h2>Inalador G-TECH</h2></li>
-                    <li><h3>Mascara adulto e infantil</h3></li>
-                    <li><p>119,99</p></li>
-                </ul>
-                <a href="#">
-                    <i class="fa fa-whatsapp" style="font-size:24px"></i>
-                    Verificar estoque
-                </a>
-            </aside>
-            <aside class="destaques-produto">
-                <img src="img/inaladorgtech.png" alt="">
-                <ul>
-                    <li><h2>Inalador G-TECH</h2></li>
-                    <li><h3>Mascara adulto e infantil</h3></li>
-                    <li><p>119,99</p></li>
-                </ul>
-                <a href="#">
-                    <i class="fa fa-whatsapp" style="font-size:24px"></i>
-                    Verificar estoque
-                </a>
-            </aside>
+                    <div class="valor-carrinho">
+                        <span>R$ 8.90</span>
+                        <button>Adicionar</button>
+                    </div>
+                </article>
+            </article>
         </section>
     </main>
-
+    
     <div class="footer">
         <h1>Contato e Localização</h1>
         <footer class="footer-container">
@@ -202,7 +213,6 @@
         function fecharMenu(){
             document.querySelector('.menu').style.width = '0px'
         }
-
     </script>
     <script src="script.js"></script>
 </body>

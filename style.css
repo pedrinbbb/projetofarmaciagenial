@@ -4,7 +4,7 @@
     padding: 0px;
 }
 html, body{
-    background-color: #F4F8FC;
+    background-color: white;
     scroll-behavior: smooth;
 }
 header.container{
@@ -14,151 +14,260 @@ header.container{
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background-color: rgb(255, 255, 255);
+    background-color: #1162D4;
 }
 .header-text{
     text-align: center;
     font-size: 0.9em;
     font-family: fonte2;
-    color: blue;
-}
+    color: white;
 
-.header-menu a{
-    text-decoration: none;
-    color: rgb(62, 62, 62);
-    font-family: fonte2;
-    padding: 0px 6px;
-    font-size: 1em;
-    transition: 0.4s;
-}
-.menu-phone{
-    display: none;
-}
-.menu{
-    position: fixed;
-    top: 15px;
-    right: -50px;
-    width: 0px;
-    height: 100%;
-    font-size: 1.4em;
-    background-color: rgb(255, 255, 255);
     display: flex;
-    justify-content: flex-start;
     align-items: center;
+    gap: 12px;
+}
+.header-paragrafo{
+    font-size: 14px;
+    color: #86b7fc;
+}
+.header-logo i{
+    align-content: center;
+    justify-items: center;
+    font-size: 24px;
+    width: 34px;
+    height: 34px;
+    background-color: #4181DD;
+    padding: 6px;
+    border-radius: 50%;
+}
+.carrinho-container{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    padding: 12px;
+    background-color: #4D89DF;
+    border-radius: 12px;
+}
+.carrinho-icon{
+    color: white;
+}
+.carrinho-valor{
+    color: white;
+    font-family: fonte3;
+}
+.fundo-banner{
+    background-image: url(img/banerfundo.png);
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    height: 650px;
+    display: flex;
     flex-direction: column;
-    padding: 6px 45px 6px 0px;
-    transition: width 0.3s;
-    z-index: 1;
-    overflow: hidden;
+    justify-content: center;
+    padding-left: 50px;
+}
+
+.fundo-banner h1{
+    line-height: 01em;
+    font-size: 4em;
+    font-family: fonte3;
+    color: white;
+    margin-bottom: 12px;
+}
+span.destaque-banner{
+    color: #DA4E4E;
+}
+.fundo-banner p{
+    color: rgba(202, 202, 202, 0.856);
+    font-family: fonte2;
+    max-width: 80%;
+    margin-bottom: 45px;
+    font-size: 1.1em;
+}
+.fundo-banner .produtos-banner a{
+    background-color: #DA4E4E;
+    padding: 14px;
+    border-radius: 12px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.212);
+    color: white;
+    text-decoration: none;
+    font-family: fonte3;
+    transition: 0.5s;
+}
+.fundo-banner .produtos-banner a:hover{
+    color: #e4e4e4;
+    background-color: #dd3d3d;
+    font-size: 17px;
+}
+main{
+    
+    max-width: 87%;
+    margin: auto;
+}
+section.produtos ul{
+    list-style: none;
+}
+section.produtos h1{
+    font-family: fonte3;
+    margin: 25px 0px 25px 0px;
+}
+.categorias-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+}
+.categorias-container li a{
+    font-family: fonte2;
+    text-decoration: none;
+    background-color: #EDF1F7;
+    color: #0D74C7;
+    padding: 6px 12px;
+    border-radius: 14px;
+}
+.categorias-container li a:focus{
+    background-color: #1162D4;
+    color: white;
+}
+article.produto-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 1rem;
+    margin-top: 25px;
+}
+article.produto{
+    border: 1px solid rgba(0, 0, 0, 0.048);
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.014);
+    transition: 0.5s;
+    display: flex;
+    flex-shrink: 1;
+    flex-direction: column;
+}
+article.produto:hover{
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.089);
+}
+article.produto img{
+    background-color: rgba(217, 255, 253, 0.089);
+    border-radius: 12px;
+    padding: 12px;
+    width: 180px;
+    max-height: 180px;
+    
+}
+article.produto .produto-tipo{
+    color: #DA4E4E;
+    font-family: fonte2;
+    padding-top: 18px;
+}
+article.produto .nome-produto{
+    font-family: fonte3;
+    margin-bottom: 6px;
+    font-size: 1.2em;
+}
+article.produto .descricao-produto{
+    color: rgb(134, 134, 134);
+    font-family: fonte2;
+    font-size: .8em;
+    margin-bottom: 8px;
+    flex-grow: 50;
+}
+article.produto div.valor-carrinho{
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    font-family: fonte3;
+    color: #1162D4;
+    flex-grow: 1;
 
 }
-.menu a{
-    text-decoration: none;
-    color: rgb(62, 62, 62);
+div.valor-carrinho button{
+    display: flex;
+    gap: 6px;
+    background-color: #1162D4;
+    border: 0px;
+    padding: 7px;
+    border-radius: 8px;
+    color: white;
     font-family: fonte2;
-    padding: 8px 0px;
+    transition: 0.5s;
+    cursor: pointer;
 }
+div.icon-carrinho{
+    color: rgba(255, 255, 255, 0.863);
+}
+div.valor-carrinho button:hover{
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .farmacia{
     color: rgb(255, 0, 0);
 }
 .genial{
-    color: red;
-}
-.header-menu a:hover{
-    color: rgb(255, 0, 0);
-}
-.banner-fundo{
-    background-image: linear-gradient(to right, rgba(0, 0, 255, 0.838), rgba(0, 255, 225, 0.514));
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.banner-fundo h1{
-    font-size: 4em;
-    color: white;
-    font-family: fonte2;
-    max-width: 900px;
-}
-.banner-fundo h2{
-    font-size: 3em;
-    color: white;
-    font-family: fonte2;
-    max-width: 600px;
+    color: #dd3d3d;
 }
 
-.banner-fundo p{
-    font-size: 1.2em;
-    color: white;
-    font-family: fonte4;
-    margin-top: 12px;
-    margin-bottom: 38px;
-    max-width: 490px;
-}
-.banner-fundo a{
-    text-decoration: none;  
-    color: white;
-    padding: 8px 24px;
-    background-color: red;
-    font-family: fonte4;
-    border-radius: 12px;
-    font-size: 0.5em;
-    transition: 0.5s;
-}
-.banner-fundo a:hover{
-    background-color: rgb(255, 255, 255);
-    color: rgb(255, 26, 26);
-}
-main{
-    background-color: #F4F8FC;
-}
-.maintext{
-    font-family: fonte3;
-    padding-top: 45px;
-    text-align: center;
-    margin-bottom: 38px;
-}
-.maintext p{
-    font-family: fonte4;
-    font-size: 1.1em;
-    color: rgb(94, 94, 94);
-}
-section.categorias{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 12px;
-    margin: auto;
-    gap: 25px;
-}
-.categorias-col{
-    text-align: center;
-    background-color: white;
-    padding: 12px;
-    height: 260px;
-    border-radius: 12px;
-    border: 1px solid rgba(128, 128, 128, 0.13);
-    transition: 0.5s;
-}
-.categorias-col:hover{
-    box-shadow: 2px 1px 10px rgba(0, 0, 0, 0.11);
-}
-.categorias-col h2{
-    color: black;
-    font-family: fonte2;
-    padding-bottom: 24px;
-    text-align: center;
-}
-.categorias-col p{
-    margin: auto;
-    font-family: fonte4;
-    padding-bottom: 24px;
-    font-size: 17px;
-    color: rgb(105, 105, 105);
-    max-width: 400px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .material-symbols-outlined{
     margin-top: 12px;
 }
@@ -170,83 +279,7 @@ section.categorias{
     border-radius: 50%;
     margin-bottom: 14px;
 }
-.material-symbols-outlined, #dois{
-    background-color: #FCEAEA;
-    color: #E23636;
-    font-size: 2.5em;
-    padding: 12px;
-    border-radius: 50%;
-    margin-bottom: 14px;
-}
-.material-symbols-outlined, #tres{
-    background-color: #E7EFFA;
-    color: #1763CE;
-    font-size: 2.5em;
-    padding: 12px;
-    border-radius: 50%;
-    margin-bottom: 14px;
-}
-.destaques{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 18px;
-    text-align: center;
-}
-ul{
-    list-style: none;
-}
-li{
-    flex-grow: 1;
-}
-aside img{
-    width: 180px;
-    margin-bottom: 12px;
-    transition: 0.5s;
-}
-aside img:hover{
-    transform: scale(1.03);
-    
-}
-aside{
-    width: 240px;
-    background-color: white;
-    padding: 12px;
-    margin-left: 6px;
-    border-radius: 12px;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.068);
-    font-family: fonte4;
-}
-aside h2{
-    padding-bottom: 0px;
-    
-}
-aside h3{
-    font-size: 0.9em;
-    color: rgb(0, 0, 0);
-    padding-bottom: 6px;
-}
-aside p{
-    color: #0400ff;
-    padding-bottom: 20px;
-    font-family: fonte2;
-    font-size: 1.1em;
-}
-aside a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    width: 160px;
-    margin: auto;
-    padding: 8px 12px;
-    text-decoration: none;
-    color: white;
-    background-color: #16A34A;
-    border-radius: 12px;
 
-}
 .footer{
     margin-top: 70px;
     background-color: #ffffff;
