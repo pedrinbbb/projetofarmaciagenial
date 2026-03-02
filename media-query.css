@@ -2,7 +2,9 @@
     div.carrinho-valor{
         display: none;
     }
+
 }
+
 @media (max-width: 750px){
     .header-menu{
         display: none;
@@ -36,11 +38,13 @@
         padding: 0px 12px;
     }
 }
+
 @media (max-width: 805px){
     section.categorias{
         flex-direction: column;
     }
 }
+
 @media (max-width: 900px){
     
     .banner-fundo h1{
@@ -64,6 +68,7 @@
         height: 250px;
     }
 }
+
 @media (max-width: 605px){
     .banner-fundo{
         height: 47vh;
@@ -105,3 +110,15 @@
         padding: 4px;
     }
 }
+
+@media (max-width: 536px){
+    article.produto-container{
+        grid-template-columns: repeat(2, minmax(0px ,1fr));
+    }
+    article.produto div.valor-carrinho{
+        gap: 8px;
+        font-size: 3.2vw;
+    }
+}
+
+

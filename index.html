@@ -43,11 +43,46 @@
             </div>
         </div>
 
-        <div class="carrinho-container">
+        <div id="carrinho-container" class="carrinho-container" onclick="abrirCarrinho()">
             <div class="carrinho-icon"><i class="fa-solid fa-cart-shopping"></i></div>
             <div class="carrinho-valor">
                 <p>R$ 0.00</p>
             </div>
+        </div>
+        <div class="cart-items-container">
+            <header class="header-cart-items">
+                <div class="text-cart-items">
+                    <h1>Seu Carrinho</h1>
+                </div>
+                <div class="icon-cart-items">
+                    <i class="fa-solid fa-x" onclick="fecharCarrinho()"></i>
+                </div>
+            </header>
+            <section class="produtos-carrinho">
+                <div class="produto-carrinho">
+                    <div class="img-produto-carrinho">
+
+                    </div>
+                    <div class="nome-produto-carrinho">
+
+                    </div>
+                    <div class="menos-carrinho">
+
+                    </div>
+                    <div class="quantidade-carrinho">
+
+                    </div>
+                    <div class="mais-carrinho">
+
+                    </div>
+                    <div class="valor-produto-carrinho">
+
+                    </div>
+                    <div class="remover-produto-carrinho">
+
+                    </div>
+                </div>
+            </section>
         </div>
     </header>
     <section class="fundo-banner" id="body">
@@ -71,7 +106,7 @@
                     <li><a href="#">Bebês</a></li>
                 </ul>
             </div>
-            <article class="produto-container"><!-- comeco article perfumaria -->
+            <article class="produto-container"><!-- comeco article todos -->
                 <article class="produto">
                     <img src="img/remedioteste.png">
                     <h5 class="produto-tipo">medicamentos</h5>
@@ -88,13 +123,13 @@
                     </div>
                 </article>
                 <article class="produto">
-                    <img src="img/aparelhopressaogtech.png" alt="">
-                    <h5 class="produto-tipo">medicamento</h5>
+                    <img src="img/remedioteste.png">
+                    <h5 class="produto-tipo">medicamentos</h5>
                     <h2 class="nome-produto">aparelho pressao</h2>
                     <p class="descricao-produto"> teste tes te dwadwaddwad</p>
                     <div class="valor-carrinho">
                         <p class="valor">R$ 8.90</p>
-                        <button type="button">
+                        <button type="button" onclick="buttonAdd()" id="buttonadd">
                             <div class="icon-carrinho">
                                 <i class="fa-solid fa-plus"></i>
                             </div>
@@ -103,13 +138,13 @@
                     </div>
                 </article>
                 <article class="produto">
-                    <img src="img/aparelhopressaogtech.png" alt="">
-                    <h5 class="produto-tipo">medicamento</h5>
+                    <img src="img/remedioteste.png">
+                    <h5 class="produto-tipo">medicamentos</h5>
                     <h2 class="nome-produto">aparelho pressao</h2>
                     <p class="descricao-produto"> teste tes te dwadwaddwad</p>
                     <div class="valor-carrinho">
                         <p class="valor">R$ 8.90</p>
-                        <button type="button">
+                        <button type="button" onclick="buttonAdd()" id="buttonadd">
                             <div class="icon-carrinho">
                                 <i class="fa-solid fa-plus"></i>
                             </div>
@@ -118,13 +153,13 @@
                     </div>
                 </article>
                 <article class="produto">
-                    <img src="img/aparelhopressaogtech.png" alt="">
-                    <h5 class="produto-tipo">medicamento</h5>
+                    <img src="img/remedioteste.png">
+                    <h5 class="produto-tipo">medicamentos</h5>
                     <h2 class="nome-produto">aparelho pressao</h2>
                     <p class="descricao-produto"> teste tes te dwadwaddwad</p>
                     <div class="valor-carrinho">
                         <p class="valor">R$ 8.90</p>
-                        <button type="button">
+                        <button type="button" onclick="buttonAdd()" id="buttonadd">
                             <div class="icon-carrinho">
                                 <i class="fa-solid fa-plus"></i>
                             </div>
@@ -132,6 +167,37 @@
                         </button>
                     </div>
                 </article>
+                <article class="produto">
+                    <img src="img/remedioteste.png">
+                    <h5 class="produto-tipo">medicamentos</h5>
+                    <h2 class="nome-produto">aparelho pressao</h2>
+                    <p class="descricao-produto"> teste tes te dwadwaddwad</p>
+                    <div class="valor-carrinho">
+                        <p class="valor">R$ 8.90</p>
+                        <button type="button" onclick="buttonAdd()" id="buttonadd">
+                            <div class="icon-carrinho">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <div class="text-carrinho">Adicionar</div>
+                        </button>
+                    </div>
+                </article>
+                <article class="produto">
+                    <img src="img/remedioteste.png">
+                    <h5 class="produto-tipo">medicamentos</h5>
+                    <h2 class="nome-produto">aparelho pressao</h2>
+                    <p class="descricao-produto"> teste tes te dwadwaddwad</p>
+                    <div class="valor-carrinho">
+                        <p class="valor">R$ 8.90</p>
+                        <button type="button" onclick="buttonAdd()" id="buttonadd">
+                            <div class="icon-carrinho">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <div class="text-carrinho">Adicionar</div>
+                        </button>
+                    </div>
+                </article>
+                
             </article> <!-- fim article todos -->
 
             <h1 id="medicamentos">Medicamentos <a href="#body"><i class="fa-solid fa-angle-up"></i></a></h1>
@@ -266,23 +332,6 @@
         </section>
     </main>
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <div class="footer">
         <h1>Contato e Localização</h1>
         <footer class="footer-container">
@@ -323,18 +372,236 @@
         </footer>
     </div>
     <script>
-        function abrirMenu(){
-            if(document.querySelector('.menu').style.width == '0'){
-                document.querySelector('.menu').style.width = '170px'
-        
-        }else {
-            document.querySelector('.menu').style.width = '170px'
+        function abrirCarrinho(){
+            if(document.querySelector('.cart-items-container').style.width == '0px'){
+                document.querySelector('.cart-items-container').style.width = '450px'
+            }
+            else{
+                document.querySelector('.cart-items-container').style.width = '0'
+            }
         }
-        }
-        function fecharMenu(){
-            document.querySelector('.menu').style.width = '0px'
+        function fecharCarrinho(){
+            if(document.querySelector('.cart-items-container').style.width == '450px'){
+                document.querySelector('.cart-items-container').style.width = '0px'
+            }
         }
     </script>
-    <script src="script.js"></script>
+    <script>
+document.addEventListener("DOMContentLoaded", function(){
+
+    let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+    const botoes = document.querySelectorAll(".valor-carrinho button");
+    const listaCarrinho = document.querySelector(".produtos-carrinho");
+    const valorTopo = document.querySelector(".carrinho-valor p");
+    const iconeCarrinho = document.querySelector(".carrinho-container");
+
+    /* ===== BADGE ===== */
+    const badge = document.createElement("div");
+    badge.style.position = "absolute";
+    badge.style.top = "-8px";
+    badge.style.right = "-8px";
+    badge.style.background = "red";
+    badge.style.color = "white";
+    badge.style.fontSize = "12px";
+    badge.style.padding = "3px 7px";
+    badge.style.borderRadius = "50px";
+    badge.style.display = "none";
+    badge.style.fontWeight = "bold";
+    iconeCarrinho.style.position = "relative";
+    iconeCarrinho.appendChild(badge);
+
+    /* ===== SOM ===== */
+    const audio = new Audio("https://www.soundjay.com/buttons/sounds/button-3.mp3");
+
+    /* ===== SALVAR ===== */
+    function salvarCarrinho(){
+        localStorage.setItem("carrinho", JSON.stringify(carrinho));
+    }
+
+    /* ===== ATUALIZAR ===== */
+    function atualizarCarrinho(){
+        listaCarrinho.innerHTML = "";
+        let total = 0;
+        let totalItens = 0;
+
+        carrinho.forEach((item, index) => {
+            total += item.preco * item.quantidade;
+            totalItens += item.quantidade;
+
+            listaCarrinho.innerHTML += `
+            <div style="background:#f9f9f9;padding:15px;border-radius:12px;margin-bottom:15px;display:flex;justify-content:space-between;align-items:center;gap:10px;">
+                <div class="nome-preco-carrinho">
+                    <strong>${item.nome}</strong><br>
+                    <small>R$ ${item.preco.toFixed(2)}</small>
+                </div>
+
+                <div class="mais-menos-carrinho">
+                    <button onclick="diminuir(${index})"><i class="fa-solid fa-minus"></i></button>
+                    ${item.quantidade}
+                    <button onclick="aumentar(${index})"><i class="fa-solid fa-plus"></i></button>
+                </div>
+
+                <div class="preco-quantidade-carrinho">
+                    R$ ${(item.preco * item.quantidade).toFixed(2)}
+                </div>
+
+                <div>
+                    <button onclick="remover(${index})" style="background:red;color:white;border:none;padding:5px 8px;border-radius:6px;">X</button>
+                </div>
+            </div>
+            `;
+        });
+
+        // Atualiza valor no topo do site
+        valorTopo.innerText = "R$ " + total.toFixed(2);
+
+        // Atualiza badge
+        if(totalItens > 0){
+            badge.style.display = "block";
+            badge.innerText = totalItens;
+        } else {
+            badge.style.display = "none";
+        }
+
+        // Mostra total dentro do carrinho lateral
+        let totalCarrinho = document.querySelector(".total-carrinho");
+        if(!totalCarrinho){
+            totalCarrinho = document.createElement("div");
+            totalCarrinho.classList.add("total-carrinho");
+            totalCarrinho.style.fontWeight = "bold";
+            totalCarrinho.style.fontSize = "18px";
+            totalCarrinho.style.margin = "15px 0";
+            totalCarrinho.style.textAlign = "right";
+            listaCarrinho.parentNode.insertBefore(totalCarrinho, listaCarrinho.nextSibling);
+        }
+        totalCarrinho.innerText = "Total: R$ " + total.toFixed(2);
+
+        // Botão Finalizar Pedido WhatsApp
+        const btnAntigo = document.querySelector(".btn-finalizar");
+        if(btnAntigo) btnAntigo.remove();
+
+        if(carrinho.length > 0){
+            const btnFinalizar = document.createElement("button");
+            btnFinalizar.innerText = "Finalizar Pedido";
+            btnFinalizar.style.width = "100%";
+            btnFinalizar.style.padding = "12px";
+            btnFinalizar.style.marginTop = "10px";
+            btnFinalizar.style.background = "#25D366";
+            btnFinalizar.style.color = "white";
+            btnFinalizar.style.fontSize = "16px";
+            btnFinalizar.style.border = "none";
+            btnFinalizar.style.borderRadius = "10px";
+            btnFinalizar.style.cursor = "pointer";
+            btnFinalizar.onclick = finalizarPedidoWhatsApp;
+            btnFinalizar.classList.add("btn-finalizar");
+            listaCarrinho.parentNode.appendChild(btnFinalizar);
+        }
+
+        salvarCarrinho();
+    }
+
+    /* ===== NOTIFICAÇÃO ===== */
+    function mostrarNotificacao(nomeProduto){
+        const notificacao = document.createElement("div");
+        notificacao.style.position = "fixed";
+        notificacao.style.top = "100px";
+        notificacao.style.right = "5%";
+        notificacao.style.background = "#00a86b";
+        notificacao.style.color = "white";
+        notificacao.style.padding = "15px 20px";
+        notificacao.style.borderRadius = "12px";
+        notificacao.style.boxShadow = "0 10px 25px rgba(0,0,0,0.2)";
+        notificacao.style.display = "flex";
+        notificacao.style.alignItems = "center";
+        notificacao.style.gap = "10px";
+        notificacao.style.transition = "0.5s ease";
+        notificacao.style.zIndex = "10000";
+        notificacao.innerHTML = `✔ ${nomeProduto} adicionado ao carrinho!`;
+
+        document.body.appendChild(notificacao);
+
+        setTimeout(() => {
+            notificacao.style.right = "20px";
+        }, 100);
+
+        setTimeout(() => {
+            notificacao.style.right = "-400";
+            setTimeout(() => notificacao.remove(), 500);
+        }, 2500);
+
+        if(navigator.vibrate) navigator.vibrate(100);
+        audio.play();
+    }
+
+    /* ===== FUNÇÕES GLOBAIS ===== */
+    window.aumentar = function(index){
+        carrinho[index].quantidade++;
+        atualizarCarrinho();
+    }
+
+    window.diminuir = function(index){
+        if(carrinho[index].quantidade > 1){
+            carrinho[index].quantidade--;
+        } else {
+            carrinho.splice(index,1);
+        }
+        atualizarCarrinho();
+    }
+
+    window.remover = function(index){
+        carrinho.splice(index,1);
+        atualizarCarrinho();
+    }
+
+    /* ===== ADICIONAR PRODUTO ===== */
+    function adicionarProduto(nome, preco){
+        const existente = carrinho.find(item => item.nome === nome);
+        if(existente){
+            existente.quantidade++;
+        } else {
+            carrinho.push({nome, preco, quantidade:1});
+        }
+        atualizarCarrinho();
+        mostrarNotificacao(nome);
+    }
+
+    /* ===== EVENTO BOTÕES ===== */
+    botoes.forEach(botao => {
+        botao.addEventListener("click", function(){
+            const produto = botao.closest(".produto");
+            const nome = produto.querySelector(".nome-produto").innerText;
+            const precoTexto = produto.querySelector(".valor").innerText;
+            const preco = parseFloat(precoTexto.replace("R$","").replace(",",".").trim());
+            adicionarProduto(nome, preco);
+        });
+    });
+
+    /* ===== FINALIZAR PEDIDO WHATSAPP ===== */
+    function finalizarPedidoWhatsApp(){
+        if(carrinho.length === 0){
+            alert("Seu carrinho está vazio!");
+            return;
+        }
+
+        const numeroWhats = "5585988104274"; // Coloque seu número aqui
+        let mensagem = "Pedido - Farmácia Genial - Olá, Quero fazer meu pedido: %0A%0A";
+        let total = 0;
+
+        carrinho.forEach(item => {
+            mensagem += `- ${item.nome} x ${item.quantidade} = R$ ${(item.preco*item.quantidade).toFixed(2)}%0A`;
+            total += item.preco*item.quantidade;
+        });
+
+        mensagem += `%0ATotal: R$ ${total.toFixed(2)}`;
+        const link = `https://wa.me/${numeroWhats}?text=${mensagem}`;
+        window.open(link, "_blank");
+    }
+
+    /* ===== INICIALIZAÇÃO ===== */
+    atualizarCarrinho();
+
+});
+</script>
 </body>
 </html>
