@@ -66,17 +66,17 @@ header.container{
     position: fixed;
     top: 0;
     right: 0;
-    width: 0;
-    height: 100vh;
+    width: 450px;
+    height: 98vh;
     background: #ffffff;
     box-shadow: -5px 0 25px rgba(0,0,0,0.15);
     overflow-x: hidden;
     transition: 0.4s ease;
     z-index: 9999;
-    display: flex;
+    display: none;
     flex-direction: column;
+    border-radius: 12px;
 }
-
 /* Header do carrinho */
 .header-cart-items{
     display: flex;
@@ -157,6 +157,18 @@ header.container{
     background: #e60000;
 }
 
+/* finalizar */
+.btn-finalizar{
+    padding: 12px;
+    border: 0px;
+    width: 80%;
+    border-radius: 12px;
+    margin: 20px auto;
+    background-color: #21f0a4;
+    cursor: pointer;
+    font-family: fonte3;
+}
+
 /* Valor total no topo */
 .carrinho-container{
     cursor: pointer;
@@ -193,7 +205,14 @@ header.container{
     z-index: 10000;
     transition: 0.5s ease;
 }
+.total-carrinho{
+    font-size: 1.2em;
+    font-family: fonte3;
+    margin: 15px 0px;
+    text-align: right;
+    padding-right: 12px;
 
+}
 .notificacao-carrinho.mostrar{
     right: 20px;
 }
@@ -229,9 +248,10 @@ header.container{
     border: 0px;
     font-size: 1em;
     background-color: #F9F9F9;
+    font-family: fonte3;
 }
 .preco-quantidade-carrinho{
-    font-family: fonte4;
+    font-family: fonte2;
 }
 .carrinho-icon{
     color: white;
@@ -241,7 +261,7 @@ header.container{
     font-family: fonte3;
 }
 .fundo-banner{
-    background-image: url(img/banerfundo.png);
+   background-color: #0D74C7;
     background-position: 100%;
     background-repeat: no-repeat;
     background-size: cover;

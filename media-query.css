@@ -2,6 +2,12 @@
     div.carrinho-valor{
         display: none;
     }
+    .header-text{
+        font-size: 0.6em;
+    }
+    .header-paragrafo{
+        font-size: 1.2em;
+    }
 
 }
 
@@ -118,6 +124,11 @@
     article.produto div.valor-carrinho{
         gap: 8px;
         font-size: 3.2vw;
+    }
+}
+@media (max-width: 450px){
+    .cart-items-container{
+        width: 100%;
     }
 }
 

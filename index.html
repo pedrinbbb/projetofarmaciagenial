@@ -373,16 +373,16 @@
     </div>
     <script>
         function abrirCarrinho(){
-            if(document.querySelector('.cart-items-container').style.width == '0px'){
-                document.querySelector('.cart-items-container').style.width = '450px'
+            if(document.querySelector('.cart-items-container').style.display == 'none'){
+                document.querySelector('.cart-items-container').style.display = 'flex'
             }
             else{
-                document.querySelector('.cart-items-container').style.width = '0'
+                document.querySelector('.cart-items-container').style.display = 'none'
             }
         }
         function fecharCarrinho(){
-            if(document.querySelector('.cart-items-container').style.width == '450px'){
-                document.querySelector('.cart-items-container').style.width = '0px'
+            if(document.querySelector('.cart-items-container').style.display == 'flex'){
+                document.querySelector('.cart-items-container').style.display = 'none'
             }
         }
     </script>
@@ -460,6 +460,7 @@ document.addEventListener("DOMContentLoaded", function(){
         if(totalItens > 0){
             badge.style.display = "block";
             badge.innerText = totalItens;
+            badge.style.fontFamily = 'fonte3'
         } else {
             badge.style.display = "none";
         }
@@ -469,10 +470,6 @@ document.addEventListener("DOMContentLoaded", function(){
         if(!totalCarrinho){
             totalCarrinho = document.createElement("div");
             totalCarrinho.classList.add("total-carrinho");
-            totalCarrinho.style.fontWeight = "bold";
-            totalCarrinho.style.fontSize = "18px";
-            totalCarrinho.style.margin = "15px 0";
-            totalCarrinho.style.textAlign = "right";
             listaCarrinho.parentNode.insertBefore(totalCarrinho, listaCarrinho.nextSibling);
         }
         totalCarrinho.innerText = "Total: R$ " + total.toFixed(2);
@@ -484,15 +481,6 @@ document.addEventListener("DOMContentLoaded", function(){
         if(carrinho.length > 0){
             const btnFinalizar = document.createElement("button");
             btnFinalizar.innerText = "Finalizar Pedido";
-            btnFinalizar.style.width = "100%";
-            btnFinalizar.style.padding = "12px";
-            btnFinalizar.style.marginTop = "10px";
-            btnFinalizar.style.background = "#25D366";
-            btnFinalizar.style.color = "white";
-            btnFinalizar.style.fontSize = "16px";
-            btnFinalizar.style.border = "none";
-            btnFinalizar.style.borderRadius = "10px";
-            btnFinalizar.style.cursor = "pointer";
             btnFinalizar.onclick = finalizarPedidoWhatsApp;
             btnFinalizar.classList.add("btn-finalizar");
             listaCarrinho.parentNode.appendChild(btnFinalizar);
@@ -504,9 +492,10 @@ document.addEventListener("DOMContentLoaded", function(){
     /* ===== NOTIFICAÇÃO ===== */
     function mostrarNotificacao(nomeProduto){
         const notificacao = document.createElement("div");
+        notificacao.style.fontFamily = 'fonte2'
         notificacao.style.position = "fixed";
-        notificacao.style.top = "100px";
-        notificacao.style.right = "5%";
+        notificacao.style.top = "94%";
+        notificacao.style.right = "-400px";
         notificacao.style.background = "#00a86b";
         notificacao.style.color = "white";
         notificacao.style.padding = "15px 20px";
@@ -526,11 +515,11 @@ document.addEventListener("DOMContentLoaded", function(){
         }, 100);
 
         setTimeout(() => {
-            notificacao.style.right = "-400";
+            notificacao.style.right = "-400px";
             setTimeout(() => notificacao.remove(), 500);
-        }, 2500);
+        }, 1500);
 
-        if(navigator.vibrate) navigator.vibrate(100);
+        if(navigator.vibrate) navigator.vibrate(200);
         audio.play();
     }
 
