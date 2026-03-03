@@ -528,7 +528,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
         if(carrinho.length > 0){
             const btnFinalizar = document.createElement("button");
-            btnFinalizar.innerText = "Finalizar Pedido";
+            btnFinalizar.innerText += `Finalizar Pedido`;
             btnFinalizar.onclick = finalizarPedidoWhatsApp;
             btnFinalizar.classList.add("btn-finalizar");
             listaCarrinho.parentNode.appendChild(btnFinalizar);
@@ -542,7 +542,7 @@ document.addEventListener("DOMContentLoaded", function(){
         const notificacao = document.createElement("div");
         notificacao.style.fontFamily = 'fonte2'
         notificacao.style.position = "fixed";
-        notificacao.style.top = "90%";
+        notificacao.style.top = "5%";
         notificacao.style.right = "-400px";
         notificacao.style.background = "#00a86b";
         notificacao.style.color = "white";
