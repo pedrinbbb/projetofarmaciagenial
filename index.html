@@ -610,7 +610,17 @@ document.addEventListener("DOMContentLoaded", function(){
             adicionarProduto(nome, preco);
         });
     });
+    /* ===== GERAR CÓDIGO DO PEDIDO ===== */
+    function gerarCodigoPedido(){
+        const agora = new Date();
+        const ano = agora.getFullYear();
+        const mes = String(agora.getMonth() + 1).padStart(2, '0');
+        const dia = String(agora.getDate()).padStart(2, '0');
 
+        const numeroAleatorio = Math.floor(1000 + Math.random() * 9000);
+
+        return `FG-${ano}${mes}${dia}-${numeroAleatorio}`;
+    }
     /* ===== FINALIZAR PEDIDO WHATSAPP ===== */
     function finalizarPedidoWhatsApp(){
         if(carrinho.length === 0){
@@ -618,8 +628,13 @@ document.addEventListener("DOMContentLoaded", function(){
             return;
         }
 
-        const numeroWhats = "5585988104274"; // Coloque seu número aqui
-        let mensagem = "Pedido - Farmácia Genial - Olá, Quero fazer meu pedido: %0A%0A";
+        const numeroWhats = "5585985677491";
+        const codigoPedido = gerarCodigoPedido();
+
+        let mensagem = `*Pedido*%0A`;
+        mensagem += "Farmácia Genial%0A%0A";
+        mensagem += "Olá, gostaria desses produtos:%0A";
+
         let total = 0;
 
         carrinho.forEach(item => {
@@ -627,9 +642,14 @@ document.addEventListener("DOMContentLoaded", function(){
             total += item.preco*item.quantidade;
         });
 
-        mensagem += `%0ATotal: R$ ${total.toFixed(2)}`;
+        mensagem += `Total: R$ ${total.toFixed(2)}`;
+
         const link = `https://wa.me/${numeroWhats}?text=${mensagem}`;
         window.open(link, "_blank");
+
+        // Opcional: limpar carrinho após finalizar
+        carrinho = [];
+        atualizarCarrinho();
     }
 
     /* ===== INICIALIZAÇÃO ===== */

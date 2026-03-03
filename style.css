@@ -370,7 +370,7 @@ div.icon-carrinho {
 div.valor-carrinho button:hover{
     transform: scale(1.05);
 }
-div.valor-carrinho:hover div.icon-carrinho {
+div.valor-carrinho:hover i{
     transform: rotate(180deg);
 }
 
