@@ -542,16 +542,16 @@ document.addEventListener("DOMContentLoaded", function(){
         const notificacao = document.createElement("div");
         notificacao.style.fontFamily = 'fonte2'
         notificacao.style.position = "fixed";
-        notificacao.style.top = "5%";
-        notificacao.style.right = "-400px";
+        notificacao.style.top = "-400px";
+        notificacao.style.right = "25%";
         notificacao.style.background = "#00a86b";
         notificacao.style.color = "white";
-        notificacao.style.padding = "15px 20px";
+        notificacao.style.padding = "8px";
         notificacao.style.borderRadius = "12px";
         notificacao.style.boxShadow = "0 10px 25px rgba(0,0,0,0.2)";
         notificacao.style.display = "flex";
         notificacao.style.alignItems = "center";
-        notificacao.style.gap = "10px";
+        notificacao.style.gap = "0px";
         notificacao.style.transition = "0.5s ease";
         notificacao.style.zIndex = "10000";
         notificacao.innerHTML = `✔ ${nomeProduto} adicionado ao carrinho!`;
@@ -559,15 +559,15 @@ document.addEventListener("DOMContentLoaded", function(){
         document.body.appendChild(notificacao);
 
         setTimeout(() => {
-            notificacao.style.right = "20px";
+            notificacao.style.top = "20px";
         }, 100);
 
         setTimeout(() => {
-            notificacao.style.right = "-400px";
+            notificacao.style.top = "-400px";
             setTimeout(() => notificacao.remove(), 500);
-        }, 1500);
+        }, 1800);
 
-        if(navigator.vibrate) navigator.vibrate(200);
+        if(navigator.vibrate) navigator.vibrate(2500);
         audio.play();
     }
 
