@@ -208,7 +208,7 @@ header.container{
     font-family: fonte3;
 }
 .fundo-banner{
-   background-color: #0D74C7;
+    background-image: linear-gradient(to right, #1162D4, #0069e0, #0077ff);
     background-position: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -370,7 +370,8 @@ div.valor-carrinho button:hover{
     transform: scale(1.05);
 }
 div.valor-carrinho:hover i{
-    transform: rotate(180deg);
+    transform: rotate(270deg);
+    transition: 0.5s;
 }
 
 
@@ -458,6 +459,7 @@ div.valor-carrinho:hover i{
     text-align: center;
     padding: 20px 0px 20px 0px;
     font-family: fonte3;
+    font-size: clamp(1.7em, 3vw, 2.1em);
 }
 .footer-container{
     margin-bottom: 50px;
