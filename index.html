@@ -760,6 +760,8 @@
         }
         
         </script>
+
+
             <script>
 document.addEventListener("DOMContentLoaded", function() {
     let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
@@ -918,6 +920,17 @@ document.addEventListener("DOMContentLoaded", function() {
             badge.style.display = "none";
         }
 
+        // Adiciona total no carrinho
+        let totalCarrinho = document.querySelector(".total-carrinho");
+        if(!totalCarrinho) {
+            totalCarrinho = document.createElement("div");
+            totalCarrinho.classList.add("total-carrinho");
+            totalCarrinho.style.fontWeight = "bold";
+            totalCarrinho.style.marginTop = "10px";
+            listaCarrinho.parentNode.insertBefore(totalCarrinho, listaCarrinho.nextSibling);
+        }
+        totalCarrinho.innerText = `Total: R$ ${total.toFixed(2)}`;
+
         // Adiciona botão finalizar pedido
         const btnAntigo = document.querySelector(".btn-finalizar");
         if(btnAntigo) btnAntigo.remove();
@@ -995,21 +1008,26 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
+    // ===== GERAR CÓDIGO DE PEDIDO =====
+    function gerarCodigoPedido() {
+        return Math.floor(1000 + Math.random() * 9000); // 4 números aleatórios
+    }
+
     // ===== FINALIZAR PEDIDO WHATSAPP =====
     function finalizarPedidoWhatsApp() {
         if(carrinho.length === 0) {
             alert("Seu carrinho está vazio!");
             return;
         }
-        
 
         const numeroWhats = "5585985677491"; // seu número
-        let mensagem = `Pedido*%0AFarmácia Genial%0A`;
+
+        let mensagem = `*Pedido*%0AFarmácia Genial%0A`;
         mensagem += `Olá, Gostaria desses produtos!%0A`
 
         let total = 0;
         carrinho.forEach(item => {
-            mensagem += `- ${item.nome} x ${item.quantidade} = R$ ${(item.preco*item.quantidade).toFixed(2)}%0A`;
+            mensagem += `- ${item.nome} x ${item.quantidade} = R$ ${(item.preco*item.quantidade).toFixed(2)}%0A%0A`;
             total += item.preco*item.quantidade;
         });
 
